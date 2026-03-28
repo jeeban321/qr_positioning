@@ -1,5 +1,6 @@
 :root{
     --theme: #280; /* CSS variable*/
+    --button-color: #280 /* for background button*/
 }
 
 body{
@@ -42,4 +43,19 @@ h1{
 #camera{
     width: 100%;
 
+}
+button{
+    background-color: var(--button-color); 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    
+}
+button:hover{
+    background-color: #333;
+    cursor: pointer;
+    transform: scale(1.05);
 }
