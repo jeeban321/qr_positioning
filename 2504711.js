@@ -22,6 +22,15 @@ function startScanner() {
         function(text) {
             const place = JSON.parse(text);
             showMarkerAt(place.top, place.left);
+            const container = document.getElementById("inventory");
+            const p = document.createElement("p");
+            p.textContent = 
+                "Name: " + place.name +
+                " | In store: " + (place.inStock ?
+        "Yes" : "No") +
+                " | Price: €" + place.price;
+
+            container.appendChild(p);
             toggleScanner();
         }
     ).catch(function(err){
